@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas EGT</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <!-- <nav id="navbar">
+        <ul>
+            <li><a href="#introduccion">Inicio</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="#formulario">Contactar</a></li>
+            <li><a href="#calendario">Calendario</a></li>
+        </ul>
+    </nav> -->
+
+    <section id="introduccion">
+        <div id="fotos-intro">
+            <img class="imagen-chica" src="img/foto chica 1.png" alt="Foto chica 1">
+            <img id="imagen-grande" src="img/foto psico ph.png" alt="Foto de psicologo EGT (placeholder)">
+            <img class="imagen-chica" src="img/foto chica 2.png" alt="Foto chica 2">
+        </div>
+
+        <div id="texto-intro">
+            <h1>Ofrezco ayuda psicológica</h1><br>
+            <h2>Mi nombre es nombre</h2><br>
+            <p>Psicólogo en ciudad, con enfoque en bienestar emocional y salud mental. Mi objetivo es acompañarte en un espacio seguro, sin juicios, donde puedas explorar tus emociones y encontrar herramientas para afrontar los desafíos de la vida cotidiana. Cada persona es única, por eso adapto mi enfoque a tus necesidades y ritmo. Si estás listo para dar el primer paso, estoy aquí para caminar contigo.</p>
+        </div>
+    </section>
+
+    <section id="especialidades">
+        <div class="especialidad">
+            <h3>Depresión y estrés</h3>
+            <img src="img/depresion y estres.jpg" alt="Depresion y estres">
+            <p>La depresión y el estrés pueden manifestarse de muchas formas: cansancio constante, falta de motivación, irritabilidad o sensación de vacío. A través de un enfoque personalizado, trabajamos juntos para identificar las causas y desarrollar herramientas que te ayuden a recuperar el bienestar emocional.</p>
+        </div>
+
+        <div class="especialidad">
+            <h3>Cuadros depresivos</h3>
+            <img src="img/cuadro depresivo.jpg" alt="Cuadros depresivos">
+            <p>Los cuadros depresivos van más allá de la tristeza ocasional. Son estados persistentes que afectan tu día a día, tus relaciones y tu calidad de vida. El tratamiento se enfoca en comprender tu experiencia particular y construir un camino hacia la estabilidad emocional.</p>
+        </div>
+
+        <div class="especialidad">
+            <h3>Terapia de parejas</h3>
+            <img src="img/terapia de pareja.jpg" alt="Terapia de parejas">
+            <p>Las relaciones de pareja atraviesan momentos de tensión, desconexión o conflicto que pueden sentirse difíciles de superar solos. La terapia de parejas ofrece un espacio seguro para mejorar la comunicación, sanar heridas y fortalecer el vínculo desde la comprensión mutua.</p>
+        </div>
+    </section>
+
+    <section id="agendacion">
+        <div id="formulario" >
+            <form>
+                <p id="title-formulario">Porfavor, llena la información <!--- para agendar una cita---></p>
+
+                <label for="nombre">Nombre completo <span class="requerido">(requerido)</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="telefono">Teléfono <span class="requerido">(requerido)</span></label>
+                <input type="number" id="telefono" name="telefono" placeholder="Tu telefono" required>
+
+                <label for="seguro">Cuenta con seguro? <span class="requerido">(requerido)</span></label>
+                <label class="opcion" for="si">Si</label>
+                <input type="radio" id="si" name="seguro" value="Si">
+
+                <label class="opcion" for="no">No</label>
+                <input type="radio" id="no" name="seguro" value="No">
+
+                <label  for="razon">Cual es la razón por la que busca una cita? <span class="requerido">(opcional)</span></label>
+                <textarea id="razon" name="razon"></textarea>
+
+                <button type="submit">Enviar información</button>
+            </form>
+        </div>
+
+        <div id="calendario">
+            <div id="calendario-widget">
+                <div id="cal-header">
+                    <button type="button" id="prev-mes">←</button>
+                    <h3>Abril 2026</h3>
+                    <button type="button" id="next-mes">→</button>
+                </div>
+
+                <table id="cal-tabla">
+                    <thead>
+                        <tr>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mié</th>
+                            <th>Jue</th>
+                            <th>Vie</th>
+                            <th>Sáb</th>
+                            <th>Dom</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cal-body">
+                        <tr>
+                            <td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Consultas EGT — Todos los derechos reservados</p>
+        <p>Contacto: correo@ejemplo.com</p>
+    </footer>
+
+    <div id="popup-confirmacion">
+    <div id="popup-contenido">
+        <p id="popup-mensaje">¿Deseas agendar una cita para el <span id="popup-fecha"></span>?</p>
+        <div id="popup-botones">
+            <button type="button" id="btn-confirmar">Sí, agendar</button>
+            <button type="button" id="btn-cancelar">No, elegir otro día</button>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="scipt.js"></script>
+
+</body>
+</html>

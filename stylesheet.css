@@ -1,0 +1,390 @@
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo general */
+
+body {
+    background-color: white;
+    color: #1e375f;
+    font-family: Georgia, serif;
+    padding-top: 60px;
+}
+
+/* Elementos generales */
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    color: #143c68;
+}
+
+/* Navbar */
+
+#navbar {
+    background-color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    margin-top: -60px;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+#navbar a {
+    color: rgba(49, 48, 48, 0.323);
+    text-decoration: none;
+}
+
+/* Secciones en general */
+
+section {
+    padding: 10px 40px;
+    scroll-margin-top: 60px;
+}
+
+/* Imagenes */
+
+img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Introduccion */
+
+#introduccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(to bottom, white, #d6eaf8)
+}
+
+#texto-intro {
+    text-align: justify;
+    padding-right: 50px;
+}
+
+#introduccion h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#fotos-intro {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagen-chica {
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+#imagen-grande {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.imagen-chica:first-child{
+    align-self: flex-start;
+}
+
+.imagen-chica:last-child{
+    align-self: flex-end;
+}
+
+/* Especialidades */
+
+#especialidades {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    transition: 0.3s ease;
+    background: linear-gradient(to bottom, #d6eaf8, white);
+}
+
+.especialidad {
+    flex: 1;
+    transition: flex 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    height: 400px;
+}
+
+.especialidad img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.especialidad h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.especialidad p {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    padding: 0 20px;
+    color: white;
+}
+
+.especialidad.activa p {
+    display: block;
+    flex: 3;
+    text-align: justify;
+}
+
+.especialidad.activa h3 {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.especialidad.activa img {
+    filter: brightness(0.15);
+}
+
+.especialidad.inactiva {
+    flex: 0.1;
+}
+
+.especialidad.inactiva h3 {
+    writing-mode: vertical-rl;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+}
+
+/** Agendacion */
+/* Formulario */
+
+#agendacion {
+    background: linear-gradient(to bottom, white, #d6eaf8);
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#formulario {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: block;
+}
+
+.requerido {
+    font-size: 12px;
+    color: gray;
+}
+
+#title-formulario {
+    padding-bottom: 20px;
+    align-self: center;
+    font-weight: bold;
+}
+
+input, textarea {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.opcion {
+    margin-top: 10px;
+}
+
+#no-opcion {
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    display: inline;
+    width: auto;
+    margin: 5px 0;
+}
+
+input[type="radio"]:last-of-type {
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #143c68;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: #143c68;
+}
+
+/* Calendario */
+#calendario {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    flex-direction: column;
+}
+
+#calendario.visible {
+    display: flex;
+    opacity: 1;
+}
+
+#calendario-widget {
+    border-radius: 15px;
+    padding: 20px;
+    width: 70%;
+}
+
+#cal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#cal-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#cal-tabla th {
+    color: #143c68;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#cal-tabla td {
+    padding: 8px;
+    border-radius: 50%;
+    height: 50px;
+    cursor: pointer;
+}
+
+#cal-tabla td:hover {
+    color: white;
+}
+
+#cal-tabla td[data-dia]:hover {
+    background-color: #143c68;
+    cursor: pointer;
+}
+
+#cal-tabla td:not([data-dia]) {
+    cursor: default;
+}
+
+.dia-seleccionado {
+    background-color: #143c68;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
+
+/* Pop up */
+#popup-confirmacion {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+}
+
+#popup-botones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#msg-confirmacion {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
