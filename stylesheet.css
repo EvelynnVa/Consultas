@@ -10,13 +10,8 @@
 
 body {
     background-color: white;
-<<<<<<< HEAD
-    color: #1e375f;
-=======
     color: #1d355c;
->>>>>>> Test
     font-family: Georgia, serif;
-    padding-top: 60px;
 }
 
 /* Elementos generales */
@@ -35,29 +30,6 @@ p {
     color: #143c68;
 }
 
-/* Navbar */
-
-#navbar {
-    background-color: white;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    margin-top: -60px;
-    z-index: 1000;
-}
-
-#navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-}
-
-#navbar a {
-    color: rgba(49, 48, 48, 0.323);
-    text-decoration: none;
-}
-
 /* Secciones en general */
 
 section {
@@ -68,7 +40,6 @@ section {
 /* Imagenes */
 
 img {
-    width: 300px;
     border-radius: 10px;
 }
 
@@ -141,7 +112,6 @@ img {
 }
 
 .especialidad img {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -199,7 +169,6 @@ img {
 }
 
 /** Agendacion */
-/* Formulario */
 
 #agendacion {
     background: linear-gradient(to bottom, white, #d6eaf8);
@@ -209,6 +178,8 @@ img {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
+
+/* Formulario */
 
 #formulario {
     display: flex;
@@ -282,7 +253,6 @@ button:hover {
     display: none;
     justify-content: center;
     align-items: center;
-    opacity: 0;
     transition: opacity 0.5s ease;
     flex-direction: column;
 }
@@ -391,4 +361,105 @@ footer p {
     width: 100%;
     text-align: center;
     margin-top: 20px;
+}
+
+/* Responsividad */
+
+@media (max-width: 768px) {
+
+/* Introduccion */
+
+    #introduccion {
+        flex-direction: column;
+    }
+
+    #saludo {
+        justify-self: center;
+    }
+    
+    #texto-intro {
+        text-align: center;
+        order: 1;
+        padding-right: 0px;
+    }
+    
+    #fotos-intro {
+        order: 2;
+    }
+
+    .imagen-chica {
+        width: 0px;
+    }
+
+    #imagen-grande {
+        height: 300px;
+    }
+
+/* Especialidades */
+
+    #especialidades {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .especialidad,
+    .especialidad.activa,
+    .especialidad.inactiva {
+        flex: none;
+        height: 250px;
+    }
+
+    .especialidad p {
+        font-size: 14px
+    }
+
+    .especialidad.inactiva h3 {
+        writing-mode: horizontal-tb;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+
+/* Agendacion */
+
+    #agendacion {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-items: center;
+    }
+
+/* Formulario */
+
+    #formulario {
+        width: 100%;
+        justify-content: center;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+/* Calendario */
+
+    #calendario {
+        width: 100%;
+        padding-top: 40px;
+        align-items: center;
+    }
+
+    #calendario-widget {
+        width: 100%;
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
+    #cal-tabla {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    #cal-tabla td, #cal-tabla th {
+        padding: 5px;
+        font-size: 13px;
+    }
 }
