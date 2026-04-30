@@ -63,7 +63,7 @@ function generarCalendario(mes, anio) {
             if (celda < inicio || dia > diasEnMes) {
                 html += '<td></td>';
             } else {
-                html += `<td data-dia="${dia}" data-mes="${mes}" data-anio="${anio}">${dia}</td>`;
+                html += `<td data-dia="${dia}" data-mes="${mes}" data-anio="${anio}"><span>${dia}</span></td>`;
                 dia++;
             }
         }

@@ -11,18 +11,20 @@
 body {
     background-color: white;
     color: #1d355c;
-    font-family: Georgia, serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* Elementos generales */
 
 h1 {
     font-size: 40px;
+    font-family: "Overlock", sans-serif;
 }
 
 h2 {
     font-size: 30px;
     font-weight: bold;
+    font-family: "Overlock", sans-serif;
 }
 
 p {
@@ -282,25 +284,25 @@ button:hover {
     text-align: center;
 }
 
-#cal-tabla th {
-    color: #143c68;
-    padding: 8px;
-    font-size: 14px;
-}
-
 #cal-tabla td {
     padding: 8px;
-    border-radius: 50%;
-    height: 50px;
     cursor: pointer;
+    text-align: center;
+    height: 50px;
 }
 
-#cal-tabla td:hover {
-    color: white;
+#cal-tabla td span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
 }
 
-#cal-tabla td[data-dia]:hover {
+#cal-tabla td[data-dia]:hover span {
     background-color: #143c68;
+    color: white;
     cursor: pointer;
 }
 
@@ -308,10 +310,9 @@ button:hover {
     cursor: default;
 }
 
-.dia-seleccionado {
+.dia-seleccionado span {
     background-color: #143c68;
     color: white;
-    border-radius: 50%;
 }
 
 /* Footer */
